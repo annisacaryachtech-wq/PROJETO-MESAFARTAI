@@ -1,0 +1,12 @@
+REGRAS DO PROJETO — MESA FARTAI
+
+1. O chatbot deve responder em português.
+2. A solução tem finalidade acadêmica e de demonstração.
+3. O chatbot atende assuntos relacionados a doações, alimentos, ONGs e logística.
+4. Intenções com confiança abaixo de 0,60 devem receber resposta de fallback amigável.
+5. Quantidade, unidade, tipo de alimento e prazo devem ser extraídos quando aparecerem na mensagem.
+6. Doações devem ser armazenadas no banco SQLite.
+7. O matching deve priorizar a ONG mais próxima do doador.
+8. Nenhuma informação sensível deve ser solicitada desnecessariamente.
+9. Os dados usados no projeto são fictícios e servem apenas para testes.
+10. O chatbot não substitui atendimento humano.
