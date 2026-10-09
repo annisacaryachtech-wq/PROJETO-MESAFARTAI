@@ -1,7 +1,5 @@
 # PROJETO-MESAFARTAI
 
-# PROJETO-MESAFARTAI
-
 ## Descrição do Projeto
 
 O projeto MESAFARTAI tem como objetivo contribuir para o combate à fome e à insegurança alimentar, utilizando a tecnologia para apoiar iniciativas relacionadas ao acesso à alimentação.
