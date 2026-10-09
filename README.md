@@ -12,6 +12,7 @@ O projeto está relacionado ao **ODS 2 – Fome Zero e Agricultura Sustentável*
 
 * Nome: João Pedro da Silva Carvalho — 160164 — Curso: ADS
 * Nome: Isabelli Yachmann Fernandes Silva — 154635 — Curso: ADS
+* Nome: Anna Carolina Silva Carmona — 142167 — Curso: ADS
 
 ## Tecnologias Utilizadas
 
