@@ -152,3 +152,24 @@ if __name__ == "__main__":
         )
 
         print(f"Retorno: {motor.responder(frase)}")
+
+
+
+
+
+
+
+
+
+etapa (2)  MOTOR NLU:
+O sistema utiliza TF-IDF para transformar as frases em vetores numéricos
+e Random Forest para classificação das intenções
+O modelo Random Forest utiliza 80 árvores (n_estimators=80)
+Foi definido um threshold de 0.60 (60%) para controlar a confiança das classificações
+
+Quando a confiança da classificação for menor que 0.60, o sistema
+deve retornar fallback
+
+A intenção "fora_de_escopo" também deve retornar fallback
+O motor NLU possui testes de estresse para verificar o comportamento
+das classificações e do fallback
