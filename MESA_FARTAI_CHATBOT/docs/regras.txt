@@ -1,42 +1,65 @@
 REGRAS DO PROJETO — MESA FARTAI
 
+1. REGRAS GERAIS
+
 1. O chatbot deve responder em português.
-2. A solução tem finalidade acadêmica e de demonstração.
-3. O chatbot atende assuntos relacionados a doações, alimentos, ONGs e logística.
-4. Intenções com confiança abaixo de 0,60 devem receber resposta de fallback amigável.
-5. Quantidade, unidade, tipo de alimento e prazo devem ser extraídos quando aparecerem na mensagem.
-6. Doações devem ser armazenadas no banco SQLite.
-7. O matching deve priorizar a ONG mais próxima do doador.
-8. Nenhuma informação sensível deve ser solicitada desnecessariamente.
-9. Os dados usados no projeto são fictícios e servem apenas para testes.
-10. O chatbot não substitui atendimento humano.
+2. O projeto tem finalidade acadêmica e serve para demonstrar o funcionamento do sistema.
+3. O chatbot deve responder sobre doações, alimentos, ONGs e logística.
+4. Quando a confiança da intenção for menor que 0.60, o chatbot deve apresentar uma resposta amigável informando que não conseguiu entender a mensagem.
+5. O sistema deve identificar a quantidade, a unidade, o tipo de alimento e o prazo quando essas informações estiverem presentes na mensagem.
+6. As doações devem ser armazenadas no banco de dados SQLite.
+7. O sistema deve buscar a ONG mais próxima do local do doador.
+8. O chatbot não deve solicitar informações pessoais desnecessárias.
+9. Os dados utilizados no projeto são fictícios e servem apenas para testes.
+10. O chatbot não substitui o atendimento humano.
 
 
 
-11. ETAPA 2 - MOTOR NLU:
-O sistema utiliza TF-IDF para transformar as frases em vetores numéricos
-e Random Forest para classificação das intenções.
 
-O modelo Random Forest utiliza 80 árvores (n_estimators=80).
+2. ETAPA 2 — MOTOR NLU
 
-Foi definido um threshold de 0.60 (60%) para controlar a confiança
-das classificações.
+O sistema utiliza TF-IDF para transformar as frases em números que possam ser interpretados pelo modelo de classificação.
 
-Quando a confiança da classificação for menor que 0.60, o sistema
-deve retornar fallback.
+O Random Forest é utilizado para identificar a intenção das mensagens e foi configurado com 80 árvores.
 
-A intenção "fora_de_escopo" também deve retornar fallback.
+O nível mínimo de confiança definido para as classificações é de 0.60. Quando o resultado fica abaixo desse valor, o sistema deve apresentar uma resposta de fallback.
 
-O motor NLU possui testes de estresse para verificar o comportamento
-das classificações e do fallback.
+Mensagens classificadas como fora do assunto do projeto também devem receber essa resposta.
+
+O motor NLU possui testes para verificar se as intenções são classificadas corretamente e se o fallback funciona como esperado.
 
 
-12. ETAPA 3 - EXTRAÇÃO DE ENTIDADES E MATCHMAKING:
-O arquivo src/entities.py utiliza Regex para extrair o alimento,
-a quantidade e a data de validade das mensagens.
 
-O arquivo src/matchmaking.py utiliza o algoritmo KNN para encontrar
-a ONG geograficamente mais próxima do doador.
 
-O sistema utiliza SQLite para consultar as ONGs cadastradas
-e realizar o matchmaking logístico.
+3. ETAPA 3 — EXTRAÇÃO DE ENTIDADES E MATCHMAKING
+
+O arquivo src/entities.py utiliza Regex para identificar o alimento, a quantidade e a data de validade informados pelo usuário.
+
+O arquivo src/matchmaking.py utiliza o algoritmo KNN para encontrar a ONG geograficamente mais próxima do doador, considerando as coordenadas de cada local.
+
+O banco de dados SQLite é utilizado para consultar as ONGs cadastradas e realizar o matchmaking logístico.
+
+
+
+
+4. PASSO 4 — EXECUÇÃO E VALIDAÇÃO DOS SCRIPTS
+
+Para verificar se os arquivos estão funcionando corretamente, execute os comandos abaixo no terminal do VS Code.
+
+4.1. Executar o extrator de entidades
+
+python src/entities.py
+
+O script deve identificar e exibir as informações presentes na mensagem de teste, incluindo o alimento, a quantidade e a data de validade.
+
+4.2. Executar o motor de matchmaking logístico
+
+python src/matchmaking.py
+
+O script deve buscar a ONG mais próxima do doador e exibir o nome da ONG encontrada, seu ID e a distância estimada em quilômetros.
+
+4.3. Verificar possíveis erros
+
+Caso algum dos comandos apresente erro, verifique se os arquivos estão salvos nas pastas corretas e se as bibliotecas necessárias estão instaladas.
+
+Após a execução, confira se os resultados apresentados correspondem ao esperado para cada script.
