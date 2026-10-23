@@ -29,3 +29,14 @@ A intenção "fora_de_escopo" também deve retornar fallback.
 
 O motor NLU possui testes de estresse para verificar o comportamento
 das classificações e do fallback.
+
+
+12. ETAPA 3 - EXTRAÇÃO DE ENTIDADES E MATCHMAKING:
+O arquivo src/entities.py utiliza Regex para extrair o alimento,
+a quantidade e a data de validade das mensagens.
+
+O arquivo src/matchmaking.py utiliza o algoritmo KNN para encontrar
+a ONG geograficamente mais próxima do doador.
+
+O sistema utiliza SQLite para consultar as ONGs cadastradas
+e realizar o matchmaking logístico.
