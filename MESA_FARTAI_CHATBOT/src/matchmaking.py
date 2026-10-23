@@ -102,10 +102,3 @@ if __name__ == "__main__":
     else:
         print("Nenhuma ONG cadastrada para realizar o match.")
 
-------------------------------------------------------------------------
-PASSO 4: EXECUTAR E VALIDAR OS SCRIPTS NO TERMINAL DO VS CODE
-------------------------------------------------------------------------
-Execute os comandos abaixo no terminal do VS Code e verifique se as saídas são exibidas sem erros:
-
-python src/entities.py
-python src/matchmaking.py
