@@ -50,6 +50,7 @@ intencoes = [
     "saudacao",
     "saudacao",
     "saudacao",
+    "saudacao",
 
     "fora_de_escopo",
     "fora_de_escopo",
