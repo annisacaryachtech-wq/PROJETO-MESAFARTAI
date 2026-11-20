@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.streamlit/secrets.toml
+mesafartai_ac4.db
+
+# Backups e arquivos locais
+*_backup.db
+*.log

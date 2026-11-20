@@ -1,0 +1,6 @@
+﻿texto,intencao_esperada
+"Quero doar 15,5 kg de tomate que vencem hoje",cadastrar_doacao
+Tenho 40 quilos de arroz para doar amanhã,cadastrar_doacao
+Qual a previsão do tempo hoje?,fallback
+Quais ONGs recebem doações?,consultar_ongs
+Bom dia,saudacao

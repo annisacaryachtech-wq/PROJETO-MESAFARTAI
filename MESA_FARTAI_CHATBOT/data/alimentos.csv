@@ -1,0 +1,13 @@
+﻿alimento,categoria,unidade_padrao,aceito
+Tomate,Hortifruti,kg,sim
+Arroz,Grãos,kg,sim
+Feijão,Grãos,kg,sim
+Macarrão,Massas,kg,sim
+Batata,Hortifruti,kg,sim
+Cenoura,Hortifruti,kg,sim
+Leite,Laticínios,litro,sim
+Farinha,Mercearia,kg,sim
+Açúcar,Mercearia,kg,sim
+Óleo,Mercearia,litro,sim
+Banana,Hortifruti,kg,sim
+Maçã,Hortifruti,kg,sim

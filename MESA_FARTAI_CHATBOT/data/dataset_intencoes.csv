@@ -1,0 +1,11 @@
+﻿texto,intencao
+Quero doar alimentos,cadastrar_doacao
+Tenho 15 kg de tomate para doar hoje,cadastrar_doacao
+Tenho arroz para doar amanhã,cadastrar_doacao
+Gostaria de cadastrar uma doação,cadastrar_doacao
+Quais ONGs recebem alimentos?,consultar_ongs
+Mostrar instituições parceiras,consultar_ongs
+Preciso de alimentos para minha ONG,solicitar_doacao
+Bom dia,saudacao
+Qual a previsão do tempo hoje?,fora_de_escopo
+Conte uma receita de bolo,fora_de_escopo
